@@ -1,0 +1,61 @@
+//  *******************************************************************************
+//  
+//  mpfw / fw2 - Multi Platform FirmWare FrameWork
+//  Copyright (C) (2023) Marco Dau
+//  
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU Affero General Public License as published
+//  by the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//  
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU Affero General Public License for more details.
+//  
+//  You should have received a copy of the GNU Affero General Public License
+//  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//  
+//  You can contact me by the following email address
+//  marco <d o t> ing <d o t> dau <a t> gmail <d o t> com
+//  
+//  *******************************************************************************
+
+/*
+ * tuiManager.h
+ *
+ *  Created on: Jul, 16th 2024
+ *      Author: Marco Dau
+ */
+ 
+#ifndef TUI_MANAGER_H
+#define TUI_MANAGER_H
+
+#include <ncurses.h> // /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/ncurses.h -> curses.h
+// #include "tuiGraphicUnitRoot.h"
+#include "tuiGrphRealUnit5Root.h"
+
+
+class tuiManager_t    {
+
+// ****************************************************
+// section start **** PROCESS MANAGEMENT *****
+
+    public:
+        static void init   (void);
+        static bool body   (void);
+        static bool body   (bool p_end);
+        static void end    (void);
+
+    private:
+        // static tuiGraphicUnitRoot_t* g_baseMainWin;
+        static tuiGrphRealUnit5Root_t* g_baseMainWin;
+
+    // section end   **** PROCESS MANAGEMENT ***** 
+    // ****************************************************
+    // --------------------------
+
+};
+
+
+#endif 	// TUI_MANAGER_H
